@@ -1,0 +1,31 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jugpy</groupId>
+	<artifactId>modulo-war-her-agre</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<packaging>war</packaging>
+	
+	<parent>
+		<groupId>org.jugpy</groupId>
+		<artifactId>proyecto-raiz-her-agre</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jugpy</groupId>
+			<artifactId>modulo-ejb</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>	
+		<!-- war name y context root-->
+		<finalName>jugs</finalName>
+	</build>
+</project>

@@ -1,0 +1,43 @@
+<!-- Proyecto que tiene como finalidad demostrar reutilización a través de la herencia en Maven 3 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jugpy</groupId>
+	<artifactId>main-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<developers>
+		<developer>
+			<name>Rafael Benegas</name>
+			<email>rafaelbenegas@gmail.com</email>
+			<organization>Java User Group Paraguay</organization>
+			<url>http://jugpy.org</url>
+		</developer>
+	</developers>
+	
+	<properties>
+		<!-- Se espera que esta propiedad sea sobreescrita en un proyecto hijo-->
+		<main-class>org.jugpy.Application</main-class>
+	</properties>
+	
+	<!--El elemento build será mezclado con el de los proyectos derivados-->
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<plugins>
+			<!-- Esta configuración del plugin maven-jar-plugin será heredada a los proyectos derivados-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<!-- Esta referencia a la variable ${main-class} por defecto toma el valor definido en este pom, sin embargo la variable puede ser sobreescrita en el proyecto hijo para cambiar su valor-->	
+							<mainClass>${main-class}</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

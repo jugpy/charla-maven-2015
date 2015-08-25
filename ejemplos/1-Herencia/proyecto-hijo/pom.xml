@@ -1,0 +1,13 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- groupId y version pueden ser, opcionalmente heredados del padre-->
+	<artifactId>example-with-hearchy</artifactId>
+
+	<!--Con la herencia el contenido del pom derivado puede ser significativamente más pequeño-->
+	<parent>
+		<groupId>org.jugpy</groupId>
+		<artifactId>main-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+</project>

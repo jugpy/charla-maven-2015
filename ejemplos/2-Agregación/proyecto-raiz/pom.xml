@@ -1,0 +1,14 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jugpy</groupId>
+	<artifactId>proyecto-raiz</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<packaging>pom</packaging>
+	
+	<!-- Este proyeto agrega dos modulos -->
+	<modules>
+		<module>modulo-war</module>
+		<module>modulo-ejb</module>
+	</modules>
+</project>
